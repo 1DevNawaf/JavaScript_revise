@@ -7,7 +7,7 @@ const rl = readline.createInterface({
 });
 
 function main(){
-    askForName()
+    askForDayNumber()
 }
 
 function askForName(){
@@ -25,9 +25,51 @@ const greet = (name) => console.log("your name is " + name);
 
 const greetV2 = (name) => {
     if (name.toLowerCase() === 'nawaf'){
-        console.log(`Hail king ${name}`)
+        console.log(`Hail king ${name}`);
     }else {
-        console.log("your name is " + name)
+        console.log("your name is " + name);
+    }
+}
+
+function askForDayNumber(){
+    rl.question("please enter day number: ", (dayNumber) =>{
+        checkDay(dayNumber);
+        rl.close();
+    });
+}
+
+function checkDay(dayNumber){
+    switch (Number(dayNumber)){
+        case 1:
+            console.log("Sunday");
+            break;
+
+        case 2:
+            console.log("Monday");
+            break;
+
+        case 3:
+            console.log("Tuesday");
+            break;
+
+        case 4:
+            console.log("Wednesday");
+            break;
+
+        case 5:
+            console.log("Thursday");
+            break;
+
+        case 6:
+            console.log("Friday")
+            break;
+
+        case 7:
+            console.log("Saturday")
+            break;
+
+        default:
+            console.log("Wrong day");
     }
 }
 
