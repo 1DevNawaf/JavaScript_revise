@@ -9,14 +9,18 @@ const rl = readline.createInterface({
 // Prompt the user for input
 rl.question('Please enter your name: ', (name) => {
     // Store the user's input in a variable
-    const userName = name;
+    greet(name)
 
-    // Print the variable
-    console.log(`Hello, ${userName}!`);
 
     // Close the readline interface
     rl.close();
 });
+
+
+const greet = (name) => console.log("your name is " + name);
+
+
+
 
 
 
